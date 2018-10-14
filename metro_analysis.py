@@ -1,3 +1,9 @@
+"""
+需要使用的话, 参照这个文件即可.
+请使用python3
+"""
+
+
 import random
 import time
 
@@ -7,7 +13,7 @@ import networkx as nx
 import excel_util
 from mapx import GraphMaster
 
-g = GraphMaster('gz_metro_graph.json').graph   # init a graph
+g = GraphMaster('metro_graph/gz_metro_graph.json').graph   # init a graph
 
 
 def output(result_dict, name):

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Component definition."""
+"""提供构建一个networkx中图结构的帮助函数, 不用了解."""
 
 import json
 from collections import deque
