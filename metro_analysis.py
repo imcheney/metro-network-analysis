@@ -13,7 +13,7 @@ import networkx as nx
 import excel_util
 from mapx import GraphMaster
 
-g = GraphMaster('metro_graph/gz_metro_graph.json').graph   # init a graph
+g = GraphMaster('metro_graph/gz_metro_graph_v2.2_11.json').graph   # init a graph
 
 
 def output(result_dict, name):
