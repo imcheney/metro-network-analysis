@@ -13,7 +13,7 @@ import networkx as nx
 import excel_util
 from mapx import GraphMaster
 
-g = GraphMaster('metro_graph/gz_metro_graph_v2.2_11.json').graph   # init a graph
+g = GraphMaster('metro_graph/gz_metro_graph_v2.6.json').graph   # init a graph
 
 
 def output(result_dict, name):
@@ -21,8 +21,9 @@ def output(result_dict, name):
     sorted_keys = sorted(result_dict, key=lambda k: result_dict[k], reverse=True)
     print('sorted', sorted_keys)
     d = {e: result_dict[e] for e in sorted_keys}
+    # excel文件会被写到项目的根目录
     excel_util.write_excel(r'{}{}.xls'.format(name, int(time.time()) + random.randint(-1000, 1000)), d)
-    nx.draw(g, with_labels=True, font_weight='bold')
+    # nx.draw(g, with_labels=True, font_weight='bold')
     # plt.subplot(121)
     plt.show()
 
